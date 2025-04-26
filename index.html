@@ -1,0 +1,2391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner-top-main">
+        <div class="nav-inner-top">
+          <div class="nav-inner-top-left">
+            <div class="ham-icon">
+                <span></span>
+                <span></span>
+            </div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="search-icon">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.22412 6.7814C1.22412 3.71504 3.72427 1.22165 6.79743 1.22165C9.87059 1.22165 12.3695 3.71504 12.3695 6.7814C12.3695 9.84775 9.87059 12.3424 6.79743 12.3424C3.72427 12.3424 1.22412 9.84775 1.22412 6.7814ZM16 15.1363L11.9963 11.1403C12.9905 9.96136 13.5941 8.44041 13.5941 6.7814C13.5941 3.04192 10.5442 0 6.79767 0C3.04867 0 0 3.04192 0 6.7814C0 10.5209 3.04867 13.564 6.79767 13.564C8.44322 13.564 9.95286 12.9764 11.1295 12.0027L15.1344 16L16 15.1363Z"
+                  fill="black"
+                ></path>
+              </svg>
+            <div class="input">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.22412 6.7814C1.22412 3.71504 3.72427 1.22165 6.79743 1.22165C9.87059 1.22165 12.3695 3.71504 12.3695 6.7814C12.3695 9.84775 9.87059 12.3424 6.79743 12.3424C3.72427 12.3424 1.22412 9.84775 1.22412 6.7814ZM16 15.1363L11.9963 11.1403C12.9905 9.96136 13.5941 8.44041 13.5941 6.7814C13.5941 3.04192 10.5442 0 6.79767 0C3.04867 0 0 3.04192 0 6.7814C0 10.5209 3.04867 13.564 6.79767 13.564C8.44322 13.564 9.95286 12.9764 11.1295 12.0027L15.1344 16L16 15.1363Z"
+                  fill="black"
+                ></path>
+              </svg>
+              <input type="text" placeholder="Search" />
+
+            </div>
+            <div class="links">
+              <a href="#">Membership</a>
+              <div class="line"></div>
+              <a href="#">Mission</a>
+            </div>
+          </div>
+          <div class="nav-inner-top-center">
+            <img src="/assests/images/public-goods.webp" alt="" />
+          </div>
+          <div class="nav-inner-top-right">
+            <div class="links">
+              <a href="#">Wholesale</a>
+              <div class="line"></div>
+              <a href="#">Support</a>
+              <div class="line"></div>
+              <a href="#">Login</a>
+            </div>
+            <span class="cart-icon" id="cart-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g>
+                  <g>
+                    <path
+                      fill="currentColor"
+                      d="M15.472 4.297c.452.56.626 1.284.476 1.987l-1.615 7.569a2.387 2.387 0 0 1-2.322 1.877H3.99c-1.113 0-2.09-.79-2.322-1.877L.053 6.284a2.368 2.368 0 0 1 .475-1.987 2.367 2.367 0 0 1 1.845-.881h1.834C4.697 1.396 6.223 0 8.002 0c1.789 0 3.303 1.393 3.794 3.416h1.831c.72 0 1.392.322 1.845.881zm-7.47-3.11c-1.143 0-2.15.899-2.57 2.229h5.142c-.42-1.317-1.439-2.228-2.572-2.228zm6.783 4.85c.076-.351-.01-.714-.236-.993a1.18 1.18 0 0 0-.922-.44H2.373c-.36 0-.696.16-.921.44-.226.28-.313.642-.237.992l1.616 7.568c.116.544.603.939 1.159.939h8.02c.557 0 1.044-.395 1.16-.939z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="input-drawer-main">
+          <div class="input-drawer">
+              <button class="back-btn-input">Back</button>
+              <div class="input">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.22412 6.7814C1.22412 3.71504 3.72427 1.22165 6.79743 1.22165C9.87059 1.22165 12.3695 3.71504 12.3695 6.7814C12.3695 9.84775 9.87059 12.3424 6.79743 12.3424C3.72427 12.3424 1.22412 9.84775 1.22412 6.7814ZM16 15.1363L11.9963 11.1403C12.9905 9.96136 13.5941 8.44041 13.5941 6.7814C13.5941 3.04192 10.5442 0 6.79767 0C3.04867 0 0 3.04192 0 6.7814C0 10.5209 3.04867 13.564 6.79767 13.564C8.44322 13.564 9.95286 12.9764 11.1295 12.0027L15.1344 16L16 15.1363Z"
+                      fill="black"
+                    ></path>
+                  </svg>
+                  <input type="text" placeholder="Search" />
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-inner-bottom-main">
+        <div class="nav-inner-bottom">
+          <ul>
+            <li>
+              <a href="#">Discover</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Bath & Body</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Cleaning</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Kitchen & Dining</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Home Decor</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Food</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Shop All</a>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-menu-inner-left">
+                    <div class="mega-menu-inner-left-col col-1">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mega-menu-inner-left-col">
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                      <div class="col-links">
+                        <a href="#"><h5>Hair</h5></a>
+                        <div class="links">
+                          <a href="#">Shampoo</a>
+                          <a href="#">Conditioner</a>
+                          <a href="#">Styling</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mega-menu-inner-right">
+                    <div class="mega-menu-inner-right-img-div">
+                      <img src="/assests/images/ractangle.webp" alt="" />
+                    </div>
+                    <div class="mega-menu-inner-right-content-div">
+                      <p>Nourish yourself with clean, effective essentials.</p>
+                      <a href="#">
+                        <button>Shop Bath and Body</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cart-popup-main">
+        <div class="cart-popup" id="cart-popup">
+          <div class="cart-details">
+            <div class="heading-button">
+              <p>Your Cart Is Empty</p>
+              <svg
+                id="cart-close-btn"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                  fill="#080808"
+                ></path>
+              </svg>
+            </div>
+            <div class="cart-things">
+              <p>ADD $45.00 FOR FREE SHIPPING!</p>
+              <div class="progress-bar">
+                <div class="progress-bar-inner-main">
+                  <div class="progress-bar-inner-line"></div>
+                </div>
+                <span class="package-img-main">
+                  <span class="package-img">
+                    <img src="/assests/images/package-icon.png" alt="" />
+                  </span>
+                  <span>Free Shipping</span>
+                </span>
+                <span class="package-img-main ribbon-main">
+                  <span class="package-img ribbon">
+                    <img src="/assests/images/ribbon.png" alt="" />
+                  </span>
+                  <span class="ribbon-text"
+                    >Free Wool Dryer Balls $15 Value</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="signin-text">
+            <p>Already a Member? <a href="#">Sign in</a></p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <div class="nav-menu-popup-main"> -->
+        <div class="nav-menu-popup header">
+            <div class="nav-inner-top-main">
+                <div class="nav-inner-top">
+                <div class="nav-inner-top-left">
+                    <svg class="icon-close" role="presentation" viewBox="0 0 16 14">
+                        <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="search-icon">
+                        <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.22412 6.7814C1.22412 3.71504 3.72427 1.22165 6.79743 1.22165C9.87059 1.22165 12.3695 3.71504 12.3695 6.7814C12.3695 9.84775 9.87059 12.3424 6.79743 12.3424C3.72427 12.3424 1.22412 9.84775 1.22412 6.7814ZM16 15.1363L11.9963 11.1403C12.9905 9.96136 13.5941 8.44041 13.5941 6.7814C13.5941 3.04192 10.5442 0 6.79767 0C3.04867 0 0 3.04192 0 6.7814C0 10.5209 3.04867 13.564 6.79767 13.564C8.44322 13.564 9.95286 12.9764 11.1295 12.0027L15.1344 16L16 15.1363Z"
+                        fill="black"
+                        ></path>
+                    </svg>
+                    <div class="input">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.22412 6.7814C1.22412 3.71504 3.72427 1.22165 6.79743 1.22165C9.87059 1.22165 12.3695 3.71504 12.3695 6.7814C12.3695 9.84775 9.87059 12.3424 6.79743 12.3424C3.72427 12.3424 1.22412 9.84775 1.22412 6.7814ZM16 15.1363L11.9963 11.1403C12.9905 9.96136 13.5941 8.44041 13.5941 6.7814C13.5941 3.04192 10.5442 0 6.79767 0C3.04867 0 0 3.04192 0 6.7814C0 10.5209 3.04867 13.564 6.79767 13.564C8.44322 13.564 9.95286 12.9764 11.1295 12.0027L15.1344 16L16 15.1363Z"
+                        fill="black"
+                        ></path>
+                    </svg>
+                    <input type="text" placeholder="Search" />
+        
+                    </div>
+                    <div class="links">
+                    <a href="#">Membership</a>
+                    <div class="line"></div>
+                    <a href="#">Mission</a>
+                    </div>
+                </div>
+                <div class="nav-inner-top-center">
+                    <a href="#"><button>Member Login</button></a>
+                </div>
+                <div class="nav-inner-top-right">
+                    <div class="links">
+                    <a href="#">Wholesale</a>
+                    <div class="line"></div>
+                    <a href="#">Support</a>
+                    <div class="line"></div>
+                    <a href="#">Login</a>
+                    </div>
+                    <span class="cart-icon" id="cart-icon">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                    >
+                        <g>
+                        <g>
+                            <path
+                            fill="currentColor"
+                            d="M15.472 4.297c.452.56.626 1.284.476 1.987l-1.615 7.569a2.387 2.387 0 0 1-2.322 1.877H3.99c-1.113 0-2.09-.79-2.322-1.877L.053 6.284a2.368 2.368 0 0 1 .475-1.987 2.367 2.367 0 0 1 1.845-.881h1.834C4.697 1.396 6.223 0 8.002 0c1.789 0 3.303 1.393 3.794 3.416h1.831c.72 0 1.392.322 1.845.881zm-7.47-3.11c-1.143 0-2.15.899-2.57 2.229h5.142c-.42-1.317-1.439-2.228-2.572-2.228zm6.783 4.85c.076-.351-.01-.714-.236-.993a1.18 1.18 0 0 0-.922-.44H2.373c-.36 0-.696.16-.921.44-.226.28-.313.642-.237.992l1.616 7.568c.116.544.603.939 1.159.939h8.02c.557 0 1.044-.395 1.16-.939z"
+                            ></path>
+                        </g>
+                        </g>
+                    </svg>
+                    </span>
+                </div>
+                </div>
+                <div class="input-drawer">
+                    <button class="back-btn-input">Back</button>
+                    <div class="input">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.22412 6.7814C1.22412 3.71504 3.72427 1.22165 6.79743 1.22165C9.87059 1.22165 12.3695 3.71504 12.3695 6.7814C12.3695 9.84775 9.87059 12.3424 6.79743 12.3424C3.72427 12.3424 1.22412 9.84775 1.22412 6.7814ZM16 15.1363L11.9963 11.1403C12.9905 9.96136 13.5941 8.44041 13.5941 6.7814C13.5941 3.04192 10.5442 0 6.79767 0C3.04867 0 0 3.04192 0 6.7814C0 10.5209 3.04867 13.564 6.79767 13.564C8.44322 13.564 9.95286 12.9764 11.1295 12.0027L15.1344 16L16 15.1363Z"
+                            fill="black"
+                        ></path>
+                        </svg>
+                        <input type="text" placeholder="Search" />
+                    </div>
+                </div>
+                <div class="menu-wrapper">
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-back-btn"><span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                                <path d="M7.06445 1L2.00035 6L7.06445 11" stroke="black" stroke-width="2"></path>
+                              </svg></span> Back</div>
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-wrapper">
+                        <div class="menu-item">
+                            Discover 
+                            <span class="arrow">›</span>
+                        </div>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                              <div class="mega-menu-inner-left">
+                                <div class="mega-menu-inner-left-col col-1">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mega-menu-inner-left-col">
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                  <div class="col-links">
+                                    <a href="#"><h5>Hair</h5></a>
+                                    <div class="links">
+                                      <a href="#">Shampoo</a>
+                                      <a href="#">Conditioner</a>
+                                      <a href="#">Styling</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mega-menu-inner-right">
+                                <div class="mega-menu-inner-right-img-div">
+                                  <img src="/assests/images/ractangle.webp" alt="" />
+                                </div>
+                                <div class="mega-menu-inner-right-content-div">
+                                  <p>Nourish yourself with clean, effective essentials.</p>
+                                  <a href="#">
+                                    <button>Shop Bath and Body</button>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="menu-item faded">Login</div>
+                    <div class="menu-item faded">Mission</div>
+                    <div class="menu-item faded">Membership</div>
+                </div>
+            </div>
+            <div class="cart-popup-main">
+                <div class="cart-popup" id="cart-popup">
+                <div class="cart-details">
+                    <div class="heading-button">
+                    <p>Your Cart Is Empty</p>
+                    <svg
+                        id="cart-close-btn"
+                        class="cart-close-btn"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                        fill="#080808"
+                        ></path>
+                    </svg>
+                    </div>
+                    <div class="cart-things">
+                    <p>ADD $45.00 FOR FREE SHIPPING!</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-inner-main">
+                        <div class="progress-bar-inner-line"></div>
+                        </div>
+                        <span class="package-img-main">
+                        <span class="package-img">
+                            <img src="/assests/images/package-icon.png" alt="" />
+                        </span>
+                        <span>Free Shipping</span>
+                        </span>
+                        <span class="package-img-main ribbon-main">
+                        <span class="package-img ribbon">
+                            <img src="/assests/images/ribbon.png" alt="" />
+                        </span>
+                        <span class="ribbon-text"
+                            >Free Wool Dryer Balls $15 Value</span
+                        >
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="signin-text">
+                    <p>Already a Member? <a href="#">Sign in</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+
+    <div class="hero-section">
+      <!-- <div class="hero-img-div">
+            <img src="/assests/images/Desktop_82ed27e5-96fa-47ff-ab45-a89291eb28f1_1600x.webp" alt="">
+        </div> -->
+      <div class="hero-section-inner">
+        <div class="hero-content-div">
+          <h2>100 loads, zero waste.</h2>
+          <p>Introducing a simple, clean approach to doing laundry.</p>
+          <a href="#">
+            <button class="shop-btn">Shop Laundry Detergent Sheets</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-section-swiper-slider">
+      <div class="second-section-swiper-slider-inner-div">
+        <div class="second-section-swiper-slider-inner-top">
+          <h2>Best Sellers</h2>
+          <p class="desktop">
+            Discover the essentials that our members can't get enough of—
+            crafted with care for you and the planet.
+          </p>
+          <p class="mobile">
+            Discover the essentials that our members</br>
+            can't get enough of—</br>
+            crafted with care for you and the planet.
+          </p>
+        </div>
+        <div class="second-section-swiper-slider-inner-bottom">
+          <div class="swiper-main">
+            <div class="swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="ProductCard__Label">
+                    <span>Best Seller</span>
+                  </div>
+                  <div class="product-number-add">0</div>
+                  <div class="img-div-main">
+                    <div class="img">
+                      <img
+                        src="/assests/images/hand_soap_lifestyle_01_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="img img-2">
+                      <img
+                        src="/assests/images/Hand-Soap-copy_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <a href="#" class="heading">Hand Soap</a>
+                  <div class="price-tooltip">
+                    <span class="price">$14.95</span>
+                    <div class="tooltip">
+                      <span class="Member_Price">
+                        20% OFF FOR MEMBERS
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="9"
+                          height="10"
+                          viewBox="0 0 9 10"
+                          fill="none"
+                          class="popup-btn"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.5 0.333008C2.01472 0.333008 0 2.34773 0 4.83301C0 7.31829 2.01472 9.33301 4.5 9.33301C6.98528 9.33301 9 7.31829 9 4.83301C9 2.34773 6.98528 0.333008 4.5 0.333008ZM5.09961 3.55801H3.97461V2.58301H5.09961V3.55801ZM5.09961 7.30566H3.97461V4.53301H5.09961V7.30566Z"
+                            fill="#000"
+                          ></path>
+                        </svg>
+                      </span>
+                      <div class="popup tooltip">
+                        <p>Members save 20% on almost everything.</p>
+                        <div class="btns">
+                            <a href="#">Log in</a>
+                            <span class="line"></span>
+                            <a href="#">Join Today</a>
+                        </div>
+                        <svg class="cross-btn" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                            <path d="M12.8219 4.25L4.27393 12.75M4.27393 4.25L12.8219 12.75" stroke="#8C8C8C" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.3380072786464646">
+                                    <stop offset="51%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="51%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.3380072786464646')"></path>
+                        </svg>
+                    </div>
+                    <span class="span-1">(353)</span>
+                    <span>| 12 fl oz</span>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#" class="add-to-cart-btn">
+                        Add to Cart
+                    </a>
+                    <a href="#" class="add-to-cart-btn btn-2">
+                        <span class="sign lesser-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L8.49702 6.90248L6.50298 6.90247L3.59752 6.90248L3.59752 8.89652L6.50298 8.89652L8.49702 8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span> 
+                        <span id="cart-value">0</span> 
+                        <span class="sign greater-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L9.49702 6.90248L9.49702 2.99702L7.50298 2.99702L7.50298 6.90248L3.59752 6.90248L3.59752 8.89652L7.50298 8.89652V12.802H9.49702V8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide _2">
+                  <div class="ProductCard__Label">
+                    <span>Best Seller</span>
+                  </div>
+                  <div class="product-number-add">0</div>
+                  <div class="img-div-main">
+                    <div class="img">
+                      <img
+                        src="/assests/images/hand_soap_lifestyle_01_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="img img-2">
+                      <img
+                        src="/assests/images/Hand-Soap-copy_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <a href="#" class="heading">Hand Soap</a>
+                  <div class="price-tooltip">
+                    <span class="price">$14.95</span>
+                    <div class="tooltip">
+                      <span class="Member_Price">
+                        20% OFF FOR MEMBERS
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="9"
+                          height="10"
+                          viewBox="0 0 9 10"
+                          fill="none"
+                          class="popup-btn"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.5 0.333008C2.01472 0.333008 0 2.34773 0 4.83301C0 7.31829 2.01472 9.33301 4.5 9.33301C6.98528 9.33301 9 7.31829 9 4.83301C9 2.34773 6.98528 0.333008 4.5 0.333008ZM5.09961 3.55801H3.97461V2.58301H5.09961V3.55801ZM5.09961 7.30566H3.97461V4.53301H5.09961V7.30566Z"
+                            fill="#000"
+                          ></path>
+                        </svg>
+                      </span>
+                      <div class="popup tooltip">
+                        <p>Members save 20% on almost everything.</p>
+                        <div class="btns">
+                            <a href="#">Log in</a>
+                            <span class="line"></span>
+                            <a href="#">Join Today</a>
+                        </div>
+                        <svg class="cross-btn" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                            <path d="M12.8219 4.25L4.27393 12.75M4.27393 4.25L12.8219 12.75" stroke="#8C8C8C" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.3380072786464646">
+                                    <stop offset="51%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="51%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.3380072786464646')"></path>
+                        </svg>
+                    </div>
+                    <span class="span-1">(353)</span>
+                    <span>| 12 fl oz</span>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#" class="add-to-cart-btn">
+                        Add to Cart
+                    </a>
+                    <a href="#" class="add-to-cart-btn btn-2">
+                        <span class="sign lesser-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L8.49702 6.90248L6.50298 6.90247L3.59752 6.90248L3.59752 8.89652L6.50298 8.89652L8.49702 8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span> 
+                        <span id="cart-value">0</span> 
+                        <span class="sign greater-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L9.49702 6.90248L9.49702 2.99702L7.50298 2.99702L7.50298 6.90248L3.59752 6.90248L3.59752 8.89652L7.50298 8.89652V12.802H9.49702V8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide _3">
+                  <div class="ProductCard__Label">
+                    <span>Best Seller</span>
+                  </div>
+                  <div class="product-number-add">0</div>
+                  <div class="img-div-main">
+                    <div class="img">
+                      <img
+                        src="/assests/images/hand_soap_lifestyle_01_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="img img-2">
+                      <img
+                        src="/assests/images/Hand-Soap-copy_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <a href="#" class="heading">Hand Soap</a>
+                  <div class="price-tooltip">
+                    <span class="price">$14.95</span>
+                    <div class="tooltip">
+                      <span class="Member_Price">
+                        20% OFF FOR MEMBERS
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="9"
+                          height="10"
+                          viewBox="0 0 9 10"
+                          fill="none"
+                          class="popup-btn"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.5 0.333008C2.01472 0.333008 0 2.34773 0 4.83301C0 7.31829 2.01472 9.33301 4.5 9.33301C6.98528 9.33301 9 7.31829 9 4.83301C9 2.34773 6.98528 0.333008 4.5 0.333008ZM5.09961 3.55801H3.97461V2.58301H5.09961V3.55801ZM5.09961 7.30566H3.97461V4.53301H5.09961V7.30566Z"
+                            fill="#000"
+                          ></path>
+                        </svg>
+                      </span>
+                      <div class="popup tooltip">
+                        <p>Members save 20% on almost everything.</p>
+                        <div class="btns">
+                            <a href="#">Log in</a>
+                            <span class="line"></span>
+                            <a href="#">Join Today</a>
+                        </div>
+                        <svg class="cross-btn" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                            <path d="M12.8219 4.25L4.27393 12.75M4.27393 4.25L12.8219 12.75" stroke="#8C8C8C" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.3380072786464646">
+                                    <stop offset="51%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="51%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.3380072786464646')"></path>
+                        </svg>
+                    </div>
+                    <span class="span-1">(353)</span>
+                    <span>| 12 fl oz</span>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#" class="add-to-cart-btn">
+                        Add to Cart
+                    </a>
+                    <a href="#" class="add-to-cart-btn btn-2">
+                        <span class="sign lesser-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L8.49702 6.90248L6.50298 6.90247L3.59752 6.90248L3.59752 8.89652L6.50298 8.89652L8.49702 8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span> 
+                        <span id="cart-value">0</span> 
+                        <span class="sign greater-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L9.49702 6.90248L9.49702 2.99702L7.50298 2.99702L7.50298 6.90248L3.59752 6.90248L3.59752 8.89652L7.50298 8.89652V12.802H9.49702V8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-slide _4">
+                  <div class="ProductCard__Label">
+                    <span>Best Seller</span>
+                  </div>
+                  <div class="product-number-add">0</div>
+                  <div class="img-div-main">
+                    <div class="img">
+                      <img
+                        src="/assests/images/hand_soap_lifestyle_01_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="img img-2">
+                      <img
+                        src="/assests/images/Hand-Soap-copy_360x.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <a href="#" class="heading">Hand Soap</a>
+                  <div class="price-tooltip">
+                    <span class="price">$14.95</span>
+                    <div class="tooltip">
+                      <span class="Member_Price">
+                        20% OFF FOR MEMBERS
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="9"
+                          height="10"
+                          viewBox="0 0 9 10"
+                          fill="none"
+                          class="popup-btn"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.5 0.333008C2.01472 0.333008 0 2.34773 0 4.83301C0 7.31829 2.01472 9.33301 4.5 9.33301C6.98528 9.33301 9 7.31829 9 4.83301C9 2.34773 6.98528 0.333008 4.5 0.333008ZM5.09961 3.55801H3.97461V2.58301H5.09961V3.55801ZM5.09961 7.30566H3.97461V4.53301H5.09961V7.30566Z"
+                            fill="#000"
+                          ></path>
+                        </svg>
+                      </span>
+                      <div class="popup tooltip">
+                        <p>Members save 20% on almost everything.</p>
+                        <div class="btns">
+                            <a href="#">Log in</a>
+                            <span class="line"></span>
+                            <a href="#">Join Today</a>
+                        </div>
+                        <svg class="cross-btn" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                            <path d="M12.8219 4.25L4.27393 12.75M4.27393 4.25L12.8219 12.75" stroke="#8C8C8C" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="star-rating">
+                    <div class="stars">
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.5454909712249167">
+                                    <stop offset="100%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="100%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.5454909712249167')"></path>
+                        </svg>
+                        <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                            <defs>
+                                <linearGradient aria-hidden="true" id="yotpo_stars_gradient_0.3380072786464646">
+                                    <stop offset="51%" stop-color="#1E1E1EFF"></stop>
+                                    <stop stop-opacity="1" offset="51%" stop-color="#FFFFFF"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path aria-hidden="true" style="pointer-events: none;" d="M9 14.118L14.562 17.475L13.086 11.148L18 6.891L11.529 6.342L9 0.375L6.471 6.342L0 6.891L4.914 11.148L3.438 17.475L9 14.118Z" stroke="#1E1E1EFF" fill="url('#yotpo_stars_gradient_0.3380072786464646')"></path>
+                        </svg>
+                    </div>
+                    <span class="span-1">(353)</span>
+                    <span>| 12 fl oz</span>
+                  </div>
+                  <div class="cart-buttons">
+                    <a href="#" class="add-to-cart-btn">
+                        Add to Cart
+                    </a>
+                    <a href="#" class="add-to-cart-btn btn-2">
+                        <span class="sign lesser-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L8.49702 6.90248L6.50298 6.90247L3.59752 6.90248L3.59752 8.89652L6.50298 8.89652L8.49702 8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span> 
+                        <span id="cart-value">0</span> 
+                        <span class="sign greater-sign">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.4025 8.89652L13.4025 6.90248L9.49702 6.90248L9.49702 2.99702L7.50298 2.99702L7.50298 6.90248L3.59752 6.90248L3.59752 8.89652L7.50298 8.89652V12.802H9.49702V8.89652L13.4025 8.89652Z" fill="white"></path>
+                          </svg>
+                        </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="slide-tooltip">
+      <div class="popup tooltip">
+        <p>Members save 20% on almost everything.</p>
+        <div class="btns">
+            <a href="#">Log in</a>
+            <span class="line"></span>
+            <a href="#">Join Today</a>
+        </div>
+        <svg class="cross-btn2" xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+            <path d="M12.8219 4.25L4.27393 12.75M4.27393 4.25L12.8219 12.75" stroke="#8C8C8C" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="client-reviews-section">
+      <div class="client-reviews-section-inner-div">
+        <div class="client-reviews-section-inner-top">
+          <h2>What our members are saying</h2>
+        </div>
+        <div class="client-reviews-section-inner-bottom">
+          <div class="testi">
+            <div class="testi-left">
+              <img src="/assests/images/Image_23.webp" alt="" />
+            </div>
+            <div class="testi-right">
+              <img src="/assests/images/stars_1.png" alt="" />
+              <p>
+                This has been part of my daily routine for the past month and
+                I've been very happy with it!
+              </p>
+              <span>Josh M.</span>
+            </div>
+          </div>
+          <div class="testi _2">
+            <div class="testi-left">
+              <img src="/assests/images/Image_23.webp" alt="" />
+            </div>
+            <div class="testi-right">
+              <img src="/assests/images/stars_1.png" alt="" />
+              <p>
+                This has been part of my daily routine for the past month and
+                I've been very happy with it!
+              </p>
+              <span>Josh M.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <div class="footer-section-inner-div">
+        <div class="footer-section-inner-top">
+          <div class="footer-section-inner-top-left">
+            <h2>Join Our Mailing List</h2>
+            <div class="input">
+              <input type="text" placeholder="Enter Email" />
+              <button>
+                <svg
+                  class="Icon Icon--footer-arrow-right"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="28"
+                  viewBox="0 0 35 28"
+                >
+                  <g>
+                    <g>
+                      <g transform="rotate(-45 20.985 13.875)">
+                        <path
+                          fill="none"
+                          stroke="#fff"
+                          stroke-miterlimit="20"
+                          d="M23.521 11.34v5.071H18.45v0"
+                        ></path>
+                      </g>
+                      <g>
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-miterlimit="20"
+                          d="M24.5 13.731l-14 .018"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <p>Get access to exclusive product releases, offers, and events.</p>
+          </div>
+          <div class="footer-section-inner-top-right">
+            <ul>
+              <a href="#"><li>Wholesale</li></a>
+              <a href="#"><li>Affiliate</li></a>
+              <a href="#"><li>Privacy Policy</li></a>
+              <a href="#"><li>Terms and Refunds</li></a>
+              <a href="#"><li>Standard Terms and Conditions</li></a>
+              <a href="#"><li>Reviews</li></a>
+              <a href="#"><li>Sitemap</li></a>
+            </ul>
+            <ul>
+              <a href="#"><li>Contact</li></a>
+              <a href="#"><li>Shipping</li></a>
+              <a href="#"><li>Students</li></a>
+              <a href="#"><li>Career</li></a>
+              <a href="#"><li>Accessibility</li></a>
+            </ul>
+            <div class="follow-us">
+              <h2>Follow us</h2>
+              <div class="icons">
+                <a href="#">
+                  <svg
+                    class="Icon Icon--instagram"
+                    role="presentation"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      d="M15.994 2.886c4.273 0 4.775.019 6.464.095 1.562.07 2.406.33 2.971.552.749.292 1.283.635 1.841 1.194s.908 1.092 1.194 1.841c.216.565.483 1.41.552 2.971.076 1.689.095 2.19.095 6.464s-.019 4.775-.095 6.464c-.07 1.562-.33 2.406-.552 2.971-.292.749-.635 1.283-1.194 1.841s-1.092.908-1.841 1.194c-.565.216-1.41.483-2.971.552-1.689.076-2.19.095-6.464.095s-4.775-.019-6.464-.095c-1.562-.07-2.406-.33-2.971-.552-.749-.292-1.283-.635-1.841-1.194s-.908-1.092-1.194-1.841c-.216-.565-.483-1.41-.552-2.971-.076-1.689-.095-2.19-.095-6.464s.019-4.775.095-6.464c.07-1.562.33-2.406.552-2.971.292-.749.635-1.283 1.194-1.841s1.092-.908 1.841-1.194c.565-.216 1.41-.483 2.971-.552 1.689-.083 2.19-.095 6.464-.095zm0-2.883c-4.343 0-4.889.019-6.597.095-1.702.076-2.864.349-3.879.743-1.054.406-1.943.959-2.832 1.848S1.251 4.473.838 5.521C.444 6.537.171 7.699.095 9.407.019 11.109 0 11.655 0 15.997s.019 4.889.095 6.597c.076 1.702.349 2.864.743 3.886.406 1.054.959 1.943 1.848 2.832s1.784 1.435 2.832 1.848c1.016.394 2.178.667 3.886.743s2.248.095 6.597.095 4.889-.019 6.597-.095c1.702-.076 2.864-.349 3.886-.743 1.054-.406 1.943-.959 2.832-1.848s1.435-1.784 1.848-2.832c.394-1.016.667-2.178.743-3.886s.095-2.248.095-6.597-.019-4.889-.095-6.597c-.076-1.702-.349-2.864-.743-3.886-.406-1.054-.959-1.943-1.848-2.832S27.532 1.247 26.484.834C25.468.44 24.306.167 22.598.091c-1.714-.07-2.26-.089-6.603-.089zm0 7.778c-4.533 0-8.216 3.676-8.216 8.216s3.683 8.216 8.216 8.216 8.216-3.683 8.216-8.216-3.683-8.216-8.216-8.216zm0 13.549c-2.946 0-5.333-2.387-5.333-5.333s2.387-5.333 5.333-5.333 5.333 2.387 5.333 5.333-2.387 5.333-5.333 5.333zM26.451 7.457c0 1.059-.858 1.917-1.917 1.917s-1.917-.858-1.917-1.917c0-1.059.858-1.917 1.917-1.917s1.917.858 1.917 1.917z"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    class="Icon Icon--twitter"
+                    role="presentation"
+                    viewBox="0 0 32 26"
+                  >
+                    <path
+                      d="M32 3.077c-1.1748.525-2.4433.8748-3.768 1.031 1.356-.8123 2.3932-2.0995 2.887-3.6305-1.2686.7498-2.6746 1.2997-4.168 1.5934C25.751.796 24.045.0025 22.158.0025c-3.6242 0-6.561 2.937-6.561 6.5612 0 .5124.0562 1.0123.1686 1.4935C10.3104 7.7822 5.474 5.1702 2.237 1.196c-.5624.9687-.8873 2.0997-.8873 3.2994 0 2.2746 1.156 4.2867 2.9182 5.4615-1.075-.0314-2.0872-.3313-2.9745-.8187v.0812c0 3.1806 2.262 5.8363 5.2677 6.4362-.55.15-1.131.2312-1.731.2312-.4248 0-.831-.0438-1.2372-.1188.8374 2.6057 3.262 4.5054 6.13 4.5616-2.2495 1.7622-5.074 2.812-8.1546 2.812-.531 0-1.0498-.0313-1.5684-.0938 2.912 1.8684 6.3613 2.9494 10.0668 2.9494 12.0726 0 18.6776-10.0043 18.6776-18.6776 0-.2874-.0063-.5686-.0188-.8498C30.0066 5.5514 31.119 4.3954 32 3.077z"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    class="Icon Icon--facebook"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fab"
+                    data-icon="facebook"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-section-inner-bottom">
+          <div class="text">
+            <p>© Public Goods</p>
+          </div>
+          <ul class="Footer-PaymentList">
+            <li class="HorizontalList__Item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-labelledby="pi-american_express"
+                viewBox="0 0 38 24"
+                width="38"
+                height="24"
+              >
+                <title id="pi-american_express">American Express</title>
+                <path
+                  fill="#000"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                  opacity=".07"
+                ></path>
+                <path
+                  fill="#006FCF"
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z"
+                ></path>
+                <path
+                  fill="#006FCF"
+                  d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z"
+                ></path>
+                <path
+                  fill="#006FCF"
+                  d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z"
+                ></path>
+                <path
+                  fill="#006FCF"
+                  d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z"
+                ></path>
+                <path
+                  fill="#006FCF"
+                  d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z"
+                ></path>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                x="0"
+                y="0"
+                width="38"
+                height="24"
+                viewBox="0 0 165.521 105.965"
+                xml:space="preserve"
+                aria-labelledby="pi-apple_pay"
+              >
+                <title id="pi-apple_pay">Apple Pay</title>
+                <path
+                  fill="#000"
+                  d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875"
+                ></path>
+                <g>
+                  <g>
+                    <path
+                      fill="#000"
+                      d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858"
+                    ></path>
+                    <path
+                      fill="#000"
+                      d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048"
+                    ></path>
+                  </g>
+                  <g>
+                    <path
+                      fill="#000"
+                      d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z"
+                    ></path>
+                    <path
+                      fill="#000"
+                      d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z"
+                    ></path>
+                    <path
+                      fill="#000"
+                      d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                viewBox="0 0 38 24"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                width="38"
+                height="24"
+                aria-labelledby="pi-diners_club"
+              >
+                <title id="pi-diners_club">Diners Club</title>
+                <path
+                  opacity=".07"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                ></path>
+                <path
+                  d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+                  fill="#3086C8"
+                ></path>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                viewBox="0 0 38 24"
+                width="38"
+                height="24"
+                role="img"
+                aria-labelledby="pi-discover"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title id="pi-discover">Discover</title>
+                <path
+                  fill="#000"
+                  opacity=".07"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                ></path>
+                <path
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z"
+                  fill="#fff"
+                ></path>
+                <path
+                  d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z"
+                  fill="#231F20"
+                ></path>
+                <path
+                  d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                  fill="url(#pi-paint0_linear)"
+                ></path>
+                <path
+                  opacity=".65"
+                  d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z"
+                  fill="url(#pi-paint1_linear)"
+                ></path>
+                <path
+                  d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z"
+                  fill="#231F20"
+                ></path>
+                <path
+                  d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z"
+                  fill="#231F20"
+                ></path>
+                <path
+                  d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z"
+                  fill="#F48120"
+                ></path>
+                <defs>
+                  <linearGradient
+                    id="pi-paint0_linear"
+                    x1="21.657"
+                    y1="12.275"
+                    x2="19.632"
+                    y2="9.104"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#F89F20"></stop>
+                    <stop offset=".25" stop-color="#F79A20"></stop>
+                    <stop offset=".533" stop-color="#F68D20"></stop>
+                    <stop offset=".62" stop-color="#F58720"></stop>
+                    <stop offset=".723" stop-color="#F48120"></stop>
+                    <stop offset="1" stop-color="#F37521"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="pi-paint1_linear"
+                    x1="21.338"
+                    y1="12.232"
+                    x2="18.378"
+                    y2="6.446"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#F58720"></stop>
+                    <stop offset=".359" stop-color="#E16F27"></stop>
+                    <stop offset=".703" stop-color="#D4602C"></stop>
+                    <stop offset=".982" stop-color="#D05B2E"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 38 24"
+                width="38"
+                height="24"
+                aria-labelledby="pi-google_pay"
+              >
+                <title id="pi-google_pay">Google Pay</title>
+                <path
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                  fill="#000"
+                  opacity=".07"
+                ></path>
+                <path
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                  fill="#FFF"
+                ></path>
+                <path
+                  d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z"
+                  fill="#5F6368"
+                ></path>
+                <path
+                  d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z"
+                  fill="#4285F4"
+                ></path>
+                <path
+                  d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z"
+                  fill="#34A853"
+                ></path>
+                <path
+                  d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z"
+                  fill="#FBBC04"
+                ></path>
+                <path
+                  d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z"
+                  fill="#EA4335"
+                ></path>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                width="38"
+                height="24"
+                role="img"
+                aria-labelledby="pi-jcb"
+                viewBox="0 0 38 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title id="pi-jcb">JCB</title>
+                <g fill="none" fill-rule="evenodd">
+                  <g fill-rule="nonzero">
+                    <path
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                      fill="#000"
+                      opacity=".07"
+                    ></path>
+                    <path
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                      fill="#FFF"
+                    ></path>
+                  </g>
+                  <path
+                    d="M11.5 5H15v11.5a2.5 2.5 0 0 1-2.5 2.5H9V7.5A2.5 2.5 0 0 1 11.5 5z"
+                    fill="#006EBC"
+                  ></path>
+                  <path
+                    d="M18.5 5H22v11.5a2.5 2.5 0 0 1-2.5 2.5H16V7.5A2.5 2.5 0 0 1 18.5 5z"
+                    fill="#F00036"
+                  ></path>
+                  <path
+                    d="M25.5 5H29v11.5a2.5 2.5 0 0 1-2.5 2.5H23V7.5A2.5 2.5 0 0 1 25.5 5z"
+                    fill="#2AB419"
+                  ></path>
+                  <path
+                    d="M10.755 14.5c-1.06 0-2.122-.304-2.656-.987l.78-.676c.068 1.133 3.545 1.24 3.545-.19V9.5h1.802v3.147c0 .728-.574 1.322-1.573 1.632-.466.144-1.365.221-1.898.221zm8.116 0c-.674 0-1.388-.107-1.965-.366-.948-.425-1.312-1.206-1.3-2.199.012-1.014.436-1.782 1.468-2.165 1.319-.49 3.343-.261 3.926.27v.972c-.572-.521-1.958-.898-2.919-.46-.494.226-.737.917-.744 1.448-.006.56.245 1.252.744 1.497.953.467 2.39.04 2.919-.441v1.01c-.358.255-1.253.434-2.129.434zm8.679-2.587c.37-.235.582-.567.582-1.005 0-.438-.116-.687-.348-.939-.206-.207-.58-.469-1.238-.469H23v5h3.546c.696 0 1.097-.23 1.315-.415.283-.25.426-.53.426-.96 0-.431-.155-.908-.737-1.212zm-1.906-.281h-1.428v-1.444h1.495c.956 0 .944 1.444-.067 1.444zm.288 2.157h-1.716v-1.513h1.716c.986 0 1.083 1.513 0 1.513z"
+                    fill="#FFF"
+                    fill-rule="nonzero"
+                  ></path>
+                </g>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                viewBox="0 0 38 24"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                width="38"
+                height="24"
+                aria-labelledby="pi-master"
+              >
+                <title id="pi-master">Mastercard</title>
+                <path
+                  opacity=".07"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                ></path>
+                <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                <path
+                  fill="#FF5F00"
+                  d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
+                ></path>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                viewBox="0 0 38 24"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="24"
+                role="img"
+                aria-labelledby="pi-paypal"
+              >
+                <title id="pi-paypal">PayPal</title>
+                <path
+                  opacity=".07"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                ></path>
+                <path
+                  fill="#003087"
+                  d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"
+                ></path>
+                <path
+                  fill="#3086C8"
+                  d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"
+                ></path>
+                <path
+                  fill="#012169"
+                  d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
+                ></path>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 38 24"
+                width="38"
+                height="24"
+                aria-labelledby="pi-shopify_pay"
+              >
+                <title id="pi-shopify_pay">Shop Pay</title>
+                <path
+                  opacity=".07"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                  fill="#000"
+                ></path>
+                <path
+                  d="M35.889 0C37.05 0 38 .982 38 2.182v19.636c0 1.2-.95 2.182-2.111 2.182H2.11C.95 24 0 23.018 0 21.818V2.182C0 .982.95 0 2.111 0H35.89z"
+                  fill="#5A31F4"
+                ></path>
+                <path
+                  d="M9.35 11.368c-1.017-.223-1.47-.31-1.47-.705 0-.372.306-.558.92-.558.54 0 .934.238 1.225.704a.079.079 0 00.104.03l1.146-.584a.082.082 0 00.032-.114c-.475-.831-1.353-1.286-2.51-1.286-1.52 0-2.464.755-2.464 1.956 0 1.275 1.15 1.597 2.17 1.82 1.02.222 1.474.31 1.474.705 0 .396-.332.582-.993.582-.612 0-1.065-.282-1.34-.83a.08.08 0 00-.107-.035l-1.143.57a.083.083 0 00-.036.111c.454.92 1.384 1.437 2.627 1.437 1.583 0 2.539-.742 2.539-1.98s-1.155-1.598-2.173-1.82v-.003zM15.49 8.855c-.65 0-1.224.232-1.636.646a.04.04 0 01-.069-.03v-2.64a.08.08 0 00-.08-.081H12.27a.08.08 0 00-.08.082v8.194a.08.08 0 00.08.082h1.433a.08.08 0 00.081-.082v-3.594c0-.695.528-1.227 1.239-1.227.71 0 1.226.521 1.226 1.227v3.594a.08.08 0 00.081.082h1.433a.08.08 0 00.081-.082v-3.594c0-1.51-.981-2.577-2.355-2.577zM20.753 8.62c-.778 0-1.507.24-2.03.588a.082.082 0 00-.027.109l.632 1.088a.08.08 0 00.11.03 2.5 2.5 0 011.318-.366c1.25 0 2.17.891 2.17 2.068 0 1.003-.736 1.745-1.669 1.745-.76 0-1.288-.446-1.288-1.077 0-.361.152-.657.548-.866a.08.08 0 00.032-.113l-.596-1.018a.08.08 0 00-.098-.035c-.799.299-1.359 1.018-1.359 1.984 0 1.46 1.152 2.55 2.76 2.55 1.877 0 3.227-1.313 3.227-3.195 0-2.018-1.57-3.492-3.73-3.492zM28.675 8.843c-.724 0-1.373.27-1.845.746-.026.027-.069.007-.069-.029v-.572a.08.08 0 00-.08-.082h-1.397a.08.08 0 00-.08.082v8.182a.08.08 0 00.08.081h1.433a.08.08 0 00.081-.081v-2.683c0-.036.043-.054.069-.03a2.6 2.6 0 001.808.7c1.682 0 2.993-1.373 2.993-3.157s-1.313-3.157-2.993-3.157zm-.271 4.929c-.956 0-1.681-.768-1.681-1.783s.723-1.783 1.681-1.783c.958 0 1.68.755 1.68 1.783 0 1.027-.713 1.783-1.681 1.783h.001z"
+                  fill="#fff"
+                ></path>
+              </svg>
+            </li>
+            <li class="HorizontalList__Item">
+              <svg
+                viewBox="0 0 38 24"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                width="38"
+                height="24"
+                aria-labelledby="pi-visa"
+              >
+                <title id="pi-visa">Visa</title>
+                <path
+                  opacity=".07"
+                  d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                ></path>
+                <path
+                  d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                  fill="#142688"
+                ></path>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script>
+      let cartPopup = document.getElementById("cart-popup");
+      let cartIcon = document.getElementById("cart-icon");
+      let cartCloseBtn = document.getElementById("cart-close-btn");
+      let cartPopupMain = document.querySelector(".cart-popup-main");
+
+      cartIcon.addEventListener("click", () => {
+        cartPopup.classList.add("active");
+        cartPopupMain.classList.add("active");
+      });
+
+      cartCloseBtn.addEventListener("click", () => {
+        cartPopup.classList.remove("active");
+        cartPopupMain.classList.remove("active");
+      });
+
+      let cartPopup2 = document.querySelector(".nav-menu-popup .cart-popup");
+      let cartIcon2 = document.querySelector(".nav-menu-popup .cart-icon");
+      let cartCloseBtn2 = document.querySelector(".nav-menu-popup .cart-close-btn");
+      let cartPopupMain2 = document.querySelector(".nav-menu-popup .cart-popup-main");
+
+      cartIcon2.addEventListener("click", () => {
+        cartPopup2.classList.add("active");
+        cartPopupMain2.classList.add("active");
+      });
+
+      cartCloseBtn2.addEventListener("click", () => {
+        cartPopup2.classList.remove("active");
+        cartPopupMain2.classList.remove("active");
+      });
+
+
+      let hamIcon = document.querySelector(".ham-icon");
+      let iconClose = document.querySelector(".icon-close");
+      let headerMenuPopup = document.querySelector(".nav-menu-popup");
+
+      hamIcon.addEventListener("click", () => {
+        headerMenuPopup.classList.add("transform");
+        document.body.style.overflowY = "hidden";
+        // cartPopupMain2.classList.add("transform");
+      });
+
+      iconClose.addEventListener("click", () => {
+        headerMenuPopup.classList.remove("transform");
+        document.body.style.overflowY = "visible";
+        // cartPopupMain2.classList.remove("active");
+      });
+
+
+      let menuItems = document.querySelectorAll(".menu-item");
+      let megaMenu = document.querySelector(".nav-menu-popup .mega-menu");
+      let megaMenuBackBtn = document.querySelector(".nav-menu-popup .mega-menu-back-btn");
+
+      menuItems.forEach((menuItem) => {
+        menuItem.addEventListener("click", () => {
+          megaMenu.classList.add("menu-active");
+          document.body.style.overflowY = "hidden"; // Stop page scroll
+        });
+      });
+
+      megaMenuBackBtn.addEventListener("click", () => {
+        megaMenu.classList.remove("menu-active");
+      });
+
+      // const swiper = new Swiper(".swiper", {
+      //   slidesPerView: 4,
+      //   spaceBetween: 20,
+
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      // });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.swiper-slide');
+
+        slides.forEach(slide => {
+          const lesserSign = slide.querySelector('.sign.lesser-sign');
+          const greaterSign = slide.querySelector('.sign.greater-sign');
+          const cartValue = slide.querySelector('#cart-value'); // or use class better
+          const productNumberAdd = slide.querySelector('.product-number-add');
+          const addToCartBtn1 = slide.querySelector('.add-to-cart-btn:not(.btn-2)'); // normal button
+          const addToCartBtn2 = slide.querySelector('.add-to-cart-btn.btn-2'); // second button
+
+          let counter = 0;
+
+          function updateCounter() {
+            if (productNumberAdd) productNumberAdd.textContent = counter;
+            if (cartValue) cartValue.textContent = counter;
+            console.log("Counter for this product:", counter);
+
+            if (addToCartBtn2) {
+              if (counter > 0) {
+                addToCartBtn2.classList.add('btn-active');
+              } else {
+                addToCartBtn2.classList.remove('btn-active');
+              }
+            }
+
+            if (productNumberAdd) {
+              productNumberAdd.classList.add('cart-active');
+              setTimeout(() => {
+                productNumberAdd.classList.remove('cart-active');
+              }, 500);
+            }
+          }
+
+          if (addToCartBtn1) {
+            addToCartBtn1.addEventListener('click', function (event) {
+              event.preventDefault();
+              counter++;
+              updateCounter();
+            });
+          }
+
+          if (addToCartBtn2) {
+            addToCartBtn2.addEventListener('click', function (event) {
+              event.preventDefault();
+              // Optional stuff
+            });
+          }
+
+          if (lesserSign) {
+            lesserSign.addEventListener('click', function (event) {
+              event.preventDefault();
+              if (counter > 0) {
+                counter--;
+                updateCounter();
+              }
+            });
+          }
+
+          if (greaterSign) {
+            greaterSign.addEventListener('click', function (event) {
+              event.preventDefault();
+              counter++;
+              updateCounter();
+            });
+          }
+
+          // Initialize counter per slide
+          updateCounter();
+        });
+      });
+
+
+      let popups = document.querySelectorAll('.popup.tooltip');
+      let crossBtns = document.querySelectorAll('.cross-btn');
+      let popupBtns = document.querySelectorAll('.popup-btn');
+
+      popupBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+          popups[i].classList.add('activate');
+        });
+      });
+
+      crossBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+          popups[i].classList.remove('activate');
+        });
+      });
+
+      // Second type
+      let popup2 = document.querySelector('.slide-tooltip .popup.tooltip');
+      let crossBtn2 = document.querySelector('.cross-btn2');
+      let popupBtns2 = document.querySelectorAll('.popup-btn');
+
+      popupBtns2.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          popup2.classList.add('activate');
+        });
+      });
+
+      crossBtn2.addEventListener('click', () => {
+        popup2.classList.remove('activate');
+      });
+
+
+
+
+      let searchIcon = document.querySelector('.search-icon');
+      let inputDrawer = document.querySelector('.input-drawer');
+      let inputDrawerMain = document.querySelector('.input-drawer-main');
+      let backInput = document.querySelector('.back-btn-input');
+
+      searchIcon.addEventListener('click', () => {
+        inputDrawer.classList.add('transform');
+        inputDrawerMain.classList.add('main-active');
+      });
+
+      backInput.addEventListener('click', () => {
+        inputDrawer.classList.remove('transform');
+        inputDrawerMain.classList.remove('main-active');
+      });
+
+
+      let searchIcon2 = document.querySelector('.nav-menu-popup .search-icon');
+      let inputDrawer2 = document.querySelector('.nav-menu-popup .input-drawer');
+      let backInput2 = document.querySelector('.nav-menu-popup .back-btn-input');
+
+      searchIcon2.addEventListener('click', () => {
+        inputDrawer2.classList.add('transform');
+      });
+
+      backInput2.addEventListener('click', () => {
+        inputDrawer2.classList.remove('transform');
+      });
+    </script>
+  </body>
+</html>
