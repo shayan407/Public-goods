@@ -520,6 +520,7 @@ nav a{
     font-family: var(--book-font-reguler);
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .nav-menu-popup.header .nav-inner-top{
     background-color: #efefef;
