@@ -529,6 +529,7 @@ nav a{
 }
 .nav-menu-popup.header.transform{
     transform: translateX(0%);
+    z-index: 100;
 }
 .nav-inner-top-center a{
     border-radius: 5px;
