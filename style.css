@@ -277,10 +277,10 @@ nav a{
     align-items: center;
     justify-content: center;
     list-style: none;
-    gap: 80px;
+    gap: 30px;
 }
 .nav-inner-bottom ul > li{
-    /* width: 117px; */
+    width: 117px;
     padding-bottom: 22px !important;
     padding: 16px 0px;
     text-align: center;
