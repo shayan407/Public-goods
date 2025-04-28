@@ -2373,9 +2373,12 @@
         inputDrawer.classList.remove('transform');
         inputDrawerMain.classList.remove('main-active');
       });
-      inputDrawerMain.addEventListener('click', () => {
-        inputDrawer.classList.remove('transform');
-        inputDrawerMain.classList.remove('main-active');
+
+      inputDrawerMain.addEventListener('click', (event) => {
+        if (!inputDrawer.contains(event.target)) {
+          inputDrawer.classList.remove('transform');
+          inputDrawerMain.classList.remove('main-active');
+        }
       });
 
 
