@@ -1125,7 +1125,7 @@
           <div class="swiper-main">
             <div class="swiper swiper-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-heading="Hand Soap" data-description="12 fl oz" data-price="$14.95" data-image="/assests/images/hand_soap_lifestyle_01_360x.webp">
                   <div class="ProductCard__Label">
                     <span>Best Seller</span>
                   </div>
@@ -1249,7 +1249,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="swiper-slide _2">
+                <div class="swiper-slide _2"  data-heading="Hand Soap" data-description="12 fl oz" data-price="$14.95" data-image="/assests/images/hand_soap_lifestyle_01_360x.webp">
                   <div class="ProductCard__Label">
                     <span>Best Seller</span>
                   </div>
@@ -1373,7 +1373,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="swiper-slide _3">
+                <div class="swiper-slide _3"  data-heading="Hand Soap" data-description="12 fl oz" data-price="$14.95" data-image="/assests/images/hand_soap_lifestyle_01_360x.webp">
                   <div class="ProductCard__Label">
                     <span>Best Seller</span>
                   </div>
@@ -1497,7 +1497,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="swiper-slide _4">
+                <div class="swiper-slide _4"  data-heading="Hand Soap" data-description="12 fl oz" data-price="$14.95" data-image="/assests/images/hand_soap_lifestyle_01_360x.webp">
                   <div class="ProductCard__Label">
                     <span>Best Seller</span>
                   </div>
@@ -2178,10 +2178,10 @@
     </div>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+     <script src="script.js"></script>
     <script>
       let cartPopup = document.getElementById("cart-popup");
       let cartIcon = document.getElementById("cart-icon");
-      
       let cartCloseBtn = document.getElementById("cart-close-btn");
       let cartPopupMain = document.querySelector(".cart-popup-main");
 
@@ -2253,82 +2253,6 @@
       //     prevEl: ".swiper-button-prev",
       //   },
       // });
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const slides = document.querySelectorAll('.swiper-slide');
-        let cartSpan = document.querySelector(".cart-span");
-
-        slides.forEach(slide => {
-          const lesserSign = slide.querySelector('.sign.lesser-sign');
-          const greaterSign = slide.querySelector('.sign.greater-sign');
-          const cartValue = slide.querySelector('#cart-value'); // or use class better
-          const productNumberAdd = slide.querySelector('.product-number-add');
-          const addToCartBtn1 = slide.querySelector('.add-to-cart-btn:not(.btn-2)'); // normal button
-          const addToCartBtn2 = slide.querySelector('.add-to-cart-btn.btn-2'); // second button
-
-          let counter = 0;
-
-          function updateCounter() {
-            if (productNumberAdd) productNumberAdd.textContent = counter;
-            if (cartValue) cartValue.textContent = counter;
-            if (cartSpan) cartSpan.textContent = counter;
-            console.log("Counter for this product:", counter);
-
-            if (addToCartBtn2) {
-              if (counter > 0) {
-                addToCartBtn2.classList.add('btn-active');
-                cartSpan.classList.add('span-active');
-              } else {
-                addToCartBtn2.classList.remove('btn-active');
-                cartSpan.classList.remove('span-active');
-              }
-            }
-
-            if (productNumberAdd) {
-              productNumberAdd.classList.add('cart-active');
-              setTimeout(() => {
-                productNumberAdd.classList.remove('cart-active');
-              }, 500);
-            }
-          }
-
-          if (addToCartBtn1) {
-            addToCartBtn1.addEventListener('click', function (event) {
-              event.preventDefault();
-              counter++;
-              updateCounter();
-            });
-          }
-
-          if (addToCartBtn2) {
-            addToCartBtn2.addEventListener('click', function (event) {
-              event.preventDefault();
-              // Optional stuff
-            });
-          }
-
-          if (lesserSign) {
-            lesserSign.addEventListener('click', function (event) {
-              event.preventDefault();
-              if (counter > 0) {
-                counter--;
-                updateCounter();
-              }
-            });
-          }
-
-          if (greaterSign) {
-            greaterSign.addEventListener('click', function (event) {
-              event.preventDefault();
-              counter++;
-              updateCounter();
-            });
-          }
-
-          // Initialize counter per slide
-          updateCounter();
-        });
-      });
 
 
       let popups = document.querySelectorAll('.popup.tooltip');
