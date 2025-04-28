@@ -275,9 +275,9 @@ nav a{
 /* Style for each cart item wrapper (created dynamically) */
 .cart-item-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 24px;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -300,21 +300,73 @@ nav a{
 /* Content container for heading and description */
 .cart-item-content-container {
     flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 /* Heading styling */
 .cart-item-heading {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    font-family: var(--book-font-heavy);
     margin: 0;
-    color: #333;
+    color: rgb(8, 8, 8);
 }
 
 /* Description styling */
 .cart-item-description {
-    font-size: 14px;
+    font-size: 12px;
+    font-family: var(--book-font-reguler);
     color: #666;
     margin: 5px 0 0;
+}
+.quantity-adjust-btn {
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: var(--book-font-heavy);
+    font-size: 12px;
+    margin-top: 20px;
+}
+.quantity-adjust-btn .cart-popup-value {
+    margin-top: -5px;
+}
+.cart-item-content-container-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--book-font-reguler);
+}
+.cart-item-content-container-right span{
+    font-family: var(--book-font-heavy);
+    font-size: 14px;
+}
+.cart-item-content-container-right button{
+    background: none;
+    outline: none;
+    border: none;
+    font-family: var(--book-font-reguler);
+    font-size: 12px;
+    /* margin-top: 20px; */
+    position: relative;
+    cursor: pointer;
+}
+.cart-item-content-container-right button::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.cart-item-content-container-right button:hover::after{
+    width: 0%;
 }
 
 .nav-inner-bottom-main{
