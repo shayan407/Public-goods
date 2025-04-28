@@ -72,6 +72,7 @@
                   </g>
                 </g>
               </svg>
+              <span class="cart-span">1</span>
             </span>
           </div>
         </div>
@@ -2180,6 +2181,7 @@
     <script>
       let cartPopup = document.getElementById("cart-popup");
       let cartIcon = document.getElementById("cart-icon");
+      
       let cartCloseBtn = document.getElementById("cart-close-btn");
       let cartPopupMain = document.querySelector(".cart-popup-main");
 
@@ -2254,6 +2256,7 @@
 
       document.addEventListener('DOMContentLoaded', function () {
         const slides = document.querySelectorAll('.swiper-slide');
+        let cartSpan = document.querySelector(".cart-span");
 
         slides.forEach(slide => {
           const lesserSign = slide.querySelector('.sign.lesser-sign');
@@ -2268,13 +2271,16 @@
           function updateCounter() {
             if (productNumberAdd) productNumberAdd.textContent = counter;
             if (cartValue) cartValue.textContent = counter;
+            if (cartSpan) cartSpan.textContent = counter;
             console.log("Counter for this product:", counter);
 
             if (addToCartBtn2) {
               if (counter > 0) {
                 addToCartBtn2.classList.add('btn-active');
+                cartSpan.classList.add('span-active');
               } else {
                 addToCartBtn2.classList.remove('btn-active');
+                cartSpan.classList.remove('span-active');
               }
             }
 

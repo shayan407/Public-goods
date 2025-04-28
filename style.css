@@ -115,9 +115,18 @@ nav a{
     border-radius: 16px;
     color: white;
     transition: .2s ease-in-out;
-    width: 30px;
+    /* width: 30px; */
     height: 30px;
+    padding: 0px 8px;
     cursor: pointer;
+}
+.cart-icon span{
+    font-size: 14px;
+    margin-left: 5px;
+    display: none;
+}
+.cart-icon span.span-active{
+    display: block;
 }
 .cart-icon:hover{
     background-color: white;
@@ -277,10 +286,10 @@ nav a{
     align-items: center;
     justify-content: center;
     list-style: none;
-    gap: 30px;
+    gap: 80px;
 }
 .nav-inner-bottom ul > li{
-    width: 117px;
+    /* width: 117px; */
     padding-bottom: 22px !important;
     padding: 16px 0px;
     text-align: center;
@@ -295,7 +304,8 @@ nav a{
     padding-bottom: 22px;
 }
 .nav-inner-bottom ul > li > a:hover{
-    font-family: var(--book-font-heavy);
+    /* font-family: var(--book-font-heavy); */
+    -webkit-text-stroke: 0.6px black;
 }
 .nav-inner-bottom ul > li > a:hover::after{
     opacity: 1;
@@ -316,7 +326,7 @@ nav a{
     visibility: visible;
 }
 .nav-inner-bottom ul li .mega-menu{
-    padding: 40px 80px 40px 100px;
+    padding: 40px 0px 40px 0px;
     position: absolute;
     /* margin: 0 auto; */
     width: 100%;
@@ -337,7 +347,8 @@ nav a{
     transition: all 0.3s ease;
 }
 .mega-menu .mega-menu-inner{
-    width: 100%;
+    width: var(--page-width);
+    margin: auto;
     display: flex;
     justify-content: space-between;
 }
