@@ -144,6 +144,7 @@ nav a{
     transform: translateX(100%);
     transition: all 0.3s ease;
     font-family: var(--book-font-heavy);
+    overflow-y: scroll;
 }
 .cart-popup.active{
     transform: translateX(0);
@@ -151,7 +152,7 @@ nav a{
 .cart-popup .cart-details{
     background: inherit;
     z-index: 1;
-    padding: 24px 24px 50px;
+    padding: 24px 24px 55px;
     background-color: #d4d3cd3d;
     display: flex;
     flex-direction: column;
