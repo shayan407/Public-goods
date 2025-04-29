@@ -828,7 +828,7 @@ nav a{
 }
 
 .hero-section{
-    background-image: url(/assests/images/Desktop_82ed27e5-96fa-47ff-ab45-a89291eb28f1_1600x.webp);
+    background-image: url(/assests/images/wet-wipes.webp);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -874,7 +874,7 @@ nav a{
     cursor: pointer;
 }
 .shop-btn:hover{
-    box-shadow:  inset 0px 0px 0px 2px black;
+    box-shadow:  inset 0px 0px 0px 1px black;
 }
 
 @media(max-width: 1024px){
@@ -965,6 +965,7 @@ nav a{
     align-items: center;
     position: relative;
     flex: 1;
+    cursor: pointer;
 }
 .second-section-swiper-slider-inner-bottom .swiper-slide .ProductCard__Label{
     position: absolute;

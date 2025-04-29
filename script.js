@@ -22,6 +22,10 @@ function initializeProductSlideCounters() {
         slide.setAttribute('data-counter', counter);
         updateAllDisplays();
 
+        btnAddToCart2.addEventListener('click', (event) => {
+            event.preventDefault();
+        });
+
         function updateAllDisplays() {
             counter = parseInt(slide.getAttribute('data-counter')) || 0;
             counterDisplay.textContent = counter;
