@@ -1,3 +1,4 @@
+
 // function initializeProductSlideCounters() {
 //     const slides = document.querySelectorAll('.swiper-slide');
 //     const cartPopup = document.getElementById("cart-popup");
@@ -14,7 +15,7 @@
 //         const slideId = slide.getAttribute('data-slide-id');
 //         const heading = slide.getAttribute('data-heading') || 'No heading';
 //         const description = slide.getAttribute('data-description') || 'No description';
-//         const price = slide.getAttribute('data-price') || 'No price';
+//         const price = parseFloat(slide.getAttribute('data-price')) || 0; // Ensure price is a number
 //         const imageUrl = slide.getAttribute('data-image') || '';
 
 //         // Initialize
@@ -67,7 +68,7 @@
 //                         </div>
 //                     </div>
 //                     <div class="cart-item-content-container-right">
-//                         <span class="all-items-price">$${(parseFloat(price) * counter).toFixed(2)}</span>
+//                         <span class="all-items-price">$${(price * counter).toFixed(2)}</span>
 //                         <button class="remove-item">Remove</button>
 //                     </div>
 //                 </div>
@@ -80,6 +81,7 @@
 //             const lessBtn = cartItem.querySelector('.lesser-sign');
 //             const moreBtn = cartItem.querySelector('.greater-sign');
 //             const removeBtn = cartItem.querySelector('.remove-item');
+//             const priceSpan = cartItem.querySelector('.all-items-price'); // Corrected placement of priceSpan
 
 //             lessBtn.addEventListener('click', () => {
 //                 let val = parseInt(slide.getAttribute('data-counter'));
@@ -95,8 +97,7 @@
 //                     updateAllDisplays();
 //                 }
 
-//                 const priceSpan = cartItem.querySelector('.all-items-price');
-//                 priceSpan.textContent = `$${(parseFloat(price) * val).toFixed(2)}`;
+//                 priceSpan.textContent = `$${(price * val).toFixed(2)}`;
 //             });
 
 //             moreBtn.addEventListener('click', () => {
@@ -106,8 +107,7 @@
 //                 popupValue.textContent = val;
 //                 updateAllDisplays();
 
-//                 const priceSpan = cartItem.querySelector('.all-items-price');
-//                 priceSpan.textContent = `$${(parseFloat(price) * val).toFixed(2)}`;
+//                 priceSpan.textContent = `$${(price * val).toFixed(2)}`;
 //             });
 
 //             removeBtn.addEventListener('click', () => {
@@ -138,9 +138,9 @@
 //             const popupItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
 //             if (popupItem) {
 //                 popupItem.querySelector('.cart-popup-value').textContent = val + 1;
+//                 const priceSpan = popupItem.querySelector('.all-items-price'); // Get priceSpan here
+//                 priceSpan.textContent = `$${(price * (val + 1)).toFixed(2)}`;
 //             }
-//             const priceSpan = cartItem.querySelector('.all-items-price');
-//                 priceSpan.textContent = `$${(parseFloat(price) * val).toFixed(2)}`;
 //         });
 
 //         btnMinus.addEventListener('click', (e) => {
@@ -157,10 +157,10 @@
 //                     } else {
 //                         popupItem.querySelector('.cart-popup-value').textContent = val - 1;
 //                     }
+//                     const priceSpan = popupItem.querySelector('.all-items-price'); // Get priceSpan here
+//                     priceSpan.textContent = `$${(price * (val - 1)).toFixed(2)}`;
 //                 }
 //             }
-//             const priceSpan = cartItem.querySelector('.all-items-price');
-//             priceSpan.textContent = `$${(parseFloat(price) * val).toFixed(2)}`;
 //         });
 //     });
 // };
@@ -172,7 +172,7 @@
 
 function initializeProductSlideCounters() {
     const slides = document.querySelectorAll('.swiper-slide');
-    const cartPopup = document.getElementById("cart-popup");
+    const cartPopups = document.querySelectorAll(".cart-popup"); // Select all popups
     const cartSpan = document.querySelector(".cart-span");
 
     slides.forEach(slide => {
@@ -214,77 +214,80 @@ function initializeProductSlideCounters() {
         }
 
         function addToCartPopup() {
-            let existingItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
-            if (existingItem) return; // Don't re-add if already exists
+            // Loop through all cart popups
+            cartPopups.forEach(cartPopup => {
+                let existingItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
+                if (existingItem) return; // Don't re-add if already exists
 
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item-wrapper');
-            cartItem.setAttribute('data-slide-id', slideId);
-            cartItem.innerHTML = `
-                <div class="cart-item-image-container">
-                    <img src="${imageUrl}" alt="${heading}" class="cart-item-image"/>
-                </div>
-                <div class="cart-item-content-container">
-                    <div class="cart-item-content-container-left">
-                        <div>
-                            <h4 class="cart-item-heading">${heading}</h4>
-                            <p class="cart-item-description">Size: ${description}</p>
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item-wrapper');
+                cartItem.setAttribute('data-slide-id', slideId);
+                cartItem.innerHTML = `
+                    <div class="cart-item-image-container">
+                        <img src="${imageUrl}" alt="${heading}" class="cart-item-image"/>
+                    </div>
+                    <div class="cart-item-content-container">
+                        <div class="cart-item-content-container-left">
+                            <div>
+                                <h4 class="cart-item-heading">${heading}</h4>
+                                <p class="cart-item-description">Size: ${description}</p>
+                            </div>
+                            <div>
+                                <button class="quantity-adjust-btn">
+                                    <span class="lesser-sign">-</span>
+                                    <span class="cart-popup-value">${counter}</span>
+                                    <span class="greater-sign">+</span>
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <button class="quantity-adjust-btn">
-                                <span class="lesser-sign">-</span>
-                                <span class="cart-popup-value">${counter}</span>
-                                <span class="greater-sign">+</span>
-                            </button>
+                        <div class="cart-item-content-container-right">
+                            <span class="all-items-price">$${(price * counter).toFixed(2)}</span>
+                            <button class="remove-item">Remove</button>
                         </div>
                     </div>
-                    <div class="cart-item-content-container-right">
-                        <span class="all-items-price">$${(price * counter).toFixed(2)}</span>
-                        <button class="remove-item">Remove</button>
-                    </div>
-                </div>
-            `;
-            cartPopup.appendChild(cartItem);
-            cartPopup.style.display = 'block';
+                `;
+                cartPopup.appendChild(cartItem);
+                cartPopup.style.display = 'block';
 
-            // Handlers inside cart
-            const popupValue = cartItem.querySelector('.cart-popup-value');
-            const lessBtn = cartItem.querySelector('.lesser-sign');
-            const moreBtn = cartItem.querySelector('.greater-sign');
-            const removeBtn = cartItem.querySelector('.remove-item');
-            const priceSpan = cartItem.querySelector('.all-items-price'); // Corrected placement of priceSpan
+                // Handlers inside cart
+                const popupValue = cartItem.querySelector('.cart-popup-value');
+                const lessBtn = cartItem.querySelector('.lesser-sign');
+                const moreBtn = cartItem.querySelector('.greater-sign');
+                const removeBtn = cartItem.querySelector('.remove-item');
+                const priceSpan = cartItem.querySelector('.all-items-price'); // Corrected placement of priceSpan
 
-            lessBtn.addEventListener('click', () => {
-                let val = parseInt(slide.getAttribute('data-counter'));
-                if (val > 1) {
-                    val--;
+                lessBtn.addEventListener('click', () => {
+                    let val = parseInt(slide.getAttribute('data-counter'));
+                    if (val > 1) {
+                        val--;
+                        slide.setAttribute('data-counter', val);
+                        popupValue.textContent = val;
+                        updateAllDisplays();
+                    } else {
+                        // remove item
+                        cartItem.remove();
+                        slide.setAttribute('data-counter', 0);
+                        updateAllDisplays();
+                    }
+
+                    priceSpan.textContent = `$${(price * val).toFixed(2)}`;
+                });
+
+                moreBtn.addEventListener('click', () => {
+                    let val = parseInt(slide.getAttribute('data-counter'));
+                    val++;
                     slide.setAttribute('data-counter', val);
                     popupValue.textContent = val;
                     updateAllDisplays();
-                } else {
-                    // remove item
+
+                    priceSpan.textContent = `$${(price * val).toFixed(2)}`;
+                });
+
+                removeBtn.addEventListener('click', () => {
                     cartItem.remove();
                     slide.setAttribute('data-counter', 0);
                     updateAllDisplays();
-                }
-
-                priceSpan.textContent = `$${(price * val).toFixed(2)}`;
-            });
-
-            moreBtn.addEventListener('click', () => {
-                let val = parseInt(slide.getAttribute('data-counter'));
-                val++;
-                slide.setAttribute('data-counter', val);
-                popupValue.textContent = val;
-                updateAllDisplays();
-
-                priceSpan.textContent = `$${(price * val).toFixed(2)}`;
-            });
-
-            removeBtn.addEventListener('click', () => {
-                cartItem.remove();
-                slide.setAttribute('data-counter', 0);
-                updateAllDisplays();
+                });
             });
         };
 
@@ -306,12 +309,14 @@ function initializeProductSlideCounters() {
             slide.setAttribute('data-counter', val + 1);
             updateAllDisplays();
 
-            const popupItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
-            if (popupItem) {
-                popupItem.querySelector('.cart-popup-value').textContent = val + 1;
-                const priceSpan = popupItem.querySelector('.all-items-price'); // Get priceSpan here
-                priceSpan.textContent = `$${(price * (val + 1)).toFixed(2)}`;
-            }
+            cartPopups.forEach(cartPopup => {
+                const popupItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
+                if (popupItem) {
+                    popupItem.querySelector('.cart-popup-value').textContent = val + 1;
+                    const priceSpan = popupItem.querySelector('.all-items-price'); // Get priceSpan here
+                    priceSpan.textContent = `$${(price * (val + 1)).toFixed(2)}`;
+                }
+            });
         });
 
         btnMinus.addEventListener('click', (e) => {
@@ -321,16 +326,18 @@ function initializeProductSlideCounters() {
                 slide.setAttribute('data-counter', val - 1);
                 updateAllDisplays();
 
-                const popupItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
-                if (popupItem) {
-                    if (val - 1 === 0) {
-                        popupItem.remove();
-                    } else {
-                        popupItem.querySelector('.cart-popup-value').textContent = val - 1;
+                cartPopups.forEach(cartPopup => {
+                    const popupItem = cartPopup.querySelector(`[data-slide-id="${slideId}"]`);
+                    if (popupItem) {
+                        if (val - 1 === 0) {
+                            popupItem.remove();
+                        } else {
+                            popupItem.querySelector('.cart-popup-value').textContent = val - 1;
+                        }
+                        const priceSpan = popupItem.querySelector('.all-items-price'); // Get priceSpan here
+                        priceSpan.textContent = `$${(price * (val - 1)).toFixed(2)}`;
                     }
-                    const priceSpan = popupItem.querySelector('.all-items-price'); // Get priceSpan here
-                    priceSpan.textContent = `$${(price * (val - 1)).toFixed(2)}`;
-                }
+                });
             }
         });
     });
