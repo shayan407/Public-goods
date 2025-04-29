@@ -874,7 +874,7 @@ nav a{
     cursor: pointer;
 }
 .shop-btn:hover{
-    box-shadow:  inset 0px 0px 0px 1px black;
+    box-shadow:  inset 0px 0px 0px 2px black;
 }
 
 @media(max-width: 1024px){

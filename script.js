@@ -173,7 +173,7 @@
 function initializeProductSlideCounters() {
     const slides = document.querySelectorAll('.swiper-slide');
     const cartPopups = document.querySelectorAll(".cart-popup"); // Select all popups
-    const cartSpan = document.querySelector(".cart-span");
+    const cartSpan = document.querySelectorAll(".cart-span");
 
     slides.forEach(slide => {
         const btnAddToCart = slide.querySelector('.add-to-cart-btn:not(.btn-2)');
@@ -209,8 +209,10 @@ function initializeProductSlideCounters() {
             document.querySelectorAll('.swiper-slide').forEach(slide => {
                 total += parseInt(slide.getAttribute('data-counter')) || 0;
             });
-            if (cartSpan) cartSpan.textContent = total;
-            cartSpan.classList.toggle('span-active', total > 0);
+            cartSpan.forEach(span => {
+                span.textContent = total;
+                span.classList.toggle('span-active', total > 0);
+            });
         }
 
         function addToCartPopup() {
