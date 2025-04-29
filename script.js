@@ -28,7 +28,7 @@ function initializeProductSlideCounters() {
 
         function updateAllDisplays() {
             counter = parseInt(slide.getAttribute('data-counter')) || 0;
-            counterDisplay.textContent = counter;
+            if(counterDisplay) counterDisplay.textContent = counter;
             if (cartValue) cartValue.textContent = counter;
             btnAddToCart2.classList.toggle('btn-active', counter > 0);
             counterDisplay.classList.add('cart-active');

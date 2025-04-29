@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    /> -->
+    />
   </head>
   <body>
     <nav>
@@ -1643,6 +1643,100 @@
       </div>
     </div>
 
+    <div class="fourth-section">
+      <div class="fourth-section-inner-div">
+        <div class="fourth-section-inner-left">
+          <div class="fourth-section-inner-left-img-div">
+            <img src="/assests/images/image_27.webp" alt="">
+          </div>
+        </div>
+        <div class="fourth-section-inner-right">
+          <div class="fourth-section-inner-right-content">
+            <h2>Better starts with thoughtful choices</h2>
+            <p>At Public Goods, we thoughtfully partner with artisans and manufacturers who share our commitment to sustainability, creating purposeful products that reduce waste, respect the planet, and honor tradition.</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="fourth-section-inner-right-slider swiper-real">
+            <div class="fourth-section-inner-right-slides swiper-wrapper">
+              <div class="slide swiper-slide">
+                <div class="slide-img-div">
+                  <img src="/assests/images/bathstrips.webp" alt="">
+                </div>
+                <div class="slide-content-div">
+                  <h4>Woven Ayate</h4>
+                  <p>Mexico</p>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-img-div">
+                  <img src="/assests/images/bathstrips.webp" alt="">
+                </div>
+                <div class="slide-content-div">
+                  <h4>Woven Ayate</h4>
+                  <p>Mexico</p>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-img-div">
+                  <img src="/assests/images/bathstrips.webp" alt="">
+                </div>
+                <div class="slide-content-div">
+                  <h4>Woven Ayate</h4>
+                  <p>Mexico</p>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-img-div">
+                  <img src="/assests/images/bathstrips.webp" alt="">
+                </div>
+                <div class="slide-content-div">
+                  <h4>Woven Ayate</h4>
+                  <p>Mexico</p>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="slide-img-div">
+                  <img src="/assests/images/bathstrips.webp" alt="">
+                </div>
+                <div class="slide-content-div">
+                  <h4>Woven Ayate</h4>
+                  <p>Mexico</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fifth-section">
+      <div class="fifth-section-inner-div">
+        <div class="fifth-section-inner-content">
+          <p>"Sustainability For The Win."</p>
+          <p>"Sustainability For The Win."</p>
+          <p>"Sustainability For The Win."</p>
+          <p>"Sustainability For The Win."</p>
+          <p>"Sustainability For The Win."</p>
+        </div>
+        <div class="fifth-section-inner-images">
+          <img src="/assests/images/the-skimm-logo_300x.webp" alt="">
+          <img src="/assests/images/town-country-logo_300x.avif" alt="">
+          <img src="/assests/images/huffpost-logo-black-transparent_1_300x.png" alt="">
+          <img src="/assests/images/press-fastCo-large-2000x360_300x.webp" alt="">
+          <img src="/assests/images/mens-health-logo_300x.webp" alt="">
+        </div>
+      </div>
+      <div class="testimonial-slider swiper">
+        <div class="testimonial-slider-wrapper swiper-wrapper">
+          <!-- Add more slides as needed -->
+        </div>
+      
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
     <div class="client-reviews-section">
       <div class="client-reviews-section-inner-div">
         <div class="client-reviews-section-inner-top">
@@ -2178,9 +2272,118 @@
       </div>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const content = document.querySelectorAll('.fifth-section-inner-content p');
+        const images = document.querySelectorAll('.fifth-section-inner-images img');
+
+        // ✅ Set first image and paragraph active on load
+        if (images.length > 0) {
+          images[0].classList.add('img-active');
+        }
+        let currentActive = null;
+        if (content.length > 0) {
+          content[0].classList.add('p-active');
+          currentActive = content[0];
+        }
+
+        images.forEach((img, index) => {
+          img.addEventListener('click', () => {
+            // Highlight clicked image
+            images.forEach(i => i.classList.remove('img-active'));
+            img.classList.add('img-active');
+
+            const nextParagraph = content[index];
+
+            if (nextParagraph === currentActive) return;
+
+            // Exit current paragraph
+            if (currentActive) {
+              currentActive.classList.remove('p-active');
+              currentActive.classList.add('p-exit');
+
+              // Wait for exit animation before showing next
+              setTimeout(() => {
+                currentActive.classList.remove('p-exit');
+                nextParagraph.classList.add('p-active');
+                currentActive = nextParagraph;
+              }, 900); // match your CSS transition duration
+            } else {
+              // In case no active paragraph exists (fallback)
+              nextParagraph.classList.add('p-active');
+              currentActive = nextParagraph;
+            }
+          });
+        });
+      });
+
+
+      const sliderData = [
+        {
+          text: '"Sustainability For The Win."',
+          imgSrc: '/assests/images/the-skimm-logo_300x.webp'
+        },
+        {
+          text: '"Sustainability For The Win."',
+          imgSrc: '/assests/images/town-country-logo_300x.avif'
+        },
+        {
+          text: '"Sustainability For The Win."',
+          imgSrc: '/assests/images/huffpost-logo-black-transparent_1_300x.png'
+        },
+        {
+          text: '"Sustainability For The Win."',
+          imgSrc: '/assests/images/press-fastCo-large-2000x360_300x.webp'
+        },
+        {
+          text: '"Sustainability For The Win."',
+          imgSrc: '/assests/images/mens-health-logo_300x.webp'
+        },
+        // Add more items as needed
+      ];
+
+      // Function to dynamically generate swiper slides
+      function generateSwiperSlides() {
+        const wrapper = document.querySelector('.testimonial-slider-wrapper');
+
+        sliderData.forEach(item => {
+          const slide = document.createElement('div');
+          slide.classList.add('swiper-slide');
+
+          slide.innerHTML = `
+            <p>${item.text}</p>
+            <img src="${item.imgSrc}" alt="${item.source} Logo">
+          `;
+
+          wrapper.appendChild(slide);
+        });
+      };
+
+      // Call the function to populate the swiper slides
+      generateSwiperSlides();
+
+      const testimonialSwiper = new Swiper('.testimonial-slider', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          loop: true,
+          // breakpoints: {
+          //   768: {
+          //     enabled: false, // disable swiper on tablets/desktops
+          //   },
+          // },
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true,
+          },
+      });
+
+
       let cartPopup = document.getElementById("cart-popup");
       let cartIcon = document.getElementById("cart-icon");
       let cartCloseBtn = document.getElementById("cart-close-btn");
@@ -2244,16 +2447,31 @@
         megaMenu.classList.remove("menu-active");
       });
 
-      // const swiper = new Swiper(".swiper", {
-      //   slidesPerView: 4,
-      //   spaceBetween: 20,
+      const swiper = new Swiper(".swiper-real", {
+        slidesPerView: 4,
+        spaceBetween: 20,
 
-      //   // Navigation arrows
-      //   navigation: {
-      //     nextEl: ".swiper-button-next",
-      //     prevEl: ".swiper-button-prev",
-      //   },
-      // });
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          draggable: true,
+          hide: false, // set to true if you want it to auto-hide
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 4
+          },
+          // When window width is <= 768px
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 35
+          },
+          // Optional: for smaller devices
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          }
+        }
+      });
 
 
       let popups = document.querySelectorAll('.popup.tooltip');
@@ -2286,9 +2504,6 @@
       crossBtn2.addEventListener('click', () => {
         popup2.classList.remove('activate');
       });
-
-
-
 
       let searchIcon = document.querySelector('.search-icon');
       let inputDrawer = document.querySelector('.input-drawer');
