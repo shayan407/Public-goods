@@ -1202,6 +1202,7 @@ nav a{
     }
     .second-section-swiper-slider-inner-bottom .swiper-wrapper{
         overflow: visible;
+        padding: 20px 0px;
     }
     .second-section-swiper-slider-inner-bottom .swiper-slide .price-tooltip .tooltip .popup{
         display: none;
