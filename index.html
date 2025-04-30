@@ -1771,6 +1771,55 @@
       </div>
     </div>
 
+    <div class="client-reviews-two">
+      <div class="client-reviews-two-inner-div">
+        <div class="client-reviews-two-swiper swiper-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="client-reviews-two-slide-left_div">
+                <img class="star" src="/assests/images/stars_1.png" alt="">
+                <div class="content">
+                  <p>I have been purchasing this product for at least 6 to 7 months.  I love the smell, the weight on my hands, and the way it cleans dishes.</p>
+                  <span>Becky F.</span>
+                </div>
+                <a href="#" class="shop-btn">Shop Dish Soap</a>
+              </div>
+              <div class="client-reviews-two-slide-right_div">
+                <img src="/assests/images/dishsoap.webp" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-reviews-two-slide-left_div">
+                <img class="star" src="/assests/images/stars_1.png" alt="">
+                <div class="content">
+                  <p>I have been purchasing this product for at least 6 to 7 months.  I love the smell, the weight on my hands, and the way it cleans dishes.</p>
+                  <span>Becky F.</span>
+                </div>
+                <a href="#" class="shop-btn">Shop Dish Soap</a>
+              </div>
+              <div class="client-reviews-two-slide-right_div">
+                <img src="/assests/images/dishsoap.webp" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-reviews-two-slide-left_div">
+                <img class="star" src="/assests/images/stars_1.png" alt="">
+                <div class="content">
+                  <p>I have been purchasing this product for at least 6 to 7 months.  I love the smell, the weight on my hands, and the way it cleans dishes.</p>
+                  <span>Becky F.</span>
+                </div>
+                <a href="#" class="shop-btn">Shop Dish Soap</a>
+              </div>
+              <div class="client-reviews-two-slide-right_div">
+                <img src="/assests/images/dishsoap.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination-2"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="footer-section">
       <div class="footer-section-inner-div">
         <div class="footer-section-inner-top">
@@ -2389,6 +2438,15 @@
         },
       })
 
+
+      const reviewsTwo = new Swiper('.swiper-3', {
+        slidesPerView: 1,
+
+        pagination: {
+          el: '.swiper-pagination-2',
+          clickable: true
+        }
+      });
 
       let cartPopup = document.getElementById("cart-popup");
       let cartIcon = document.getElementById("cart-icon");
