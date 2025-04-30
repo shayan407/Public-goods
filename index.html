@@ -1729,9 +1729,7 @@
       </div>
       <div class="testimonial-slider swiper">
         <div class="testimonial-slider-wrapper swiper-wrapper">
-          <!-- Add more slides as needed -->
         </div>
-      
         <!-- Pagination dots -->
         <div class="swiper-pagination"></div>
       </div>
@@ -2319,7 +2317,6 @@
         });
       });
 
-
       const sliderData = [
         {
           text: '"Sustainability For The Win."',
@@ -2350,38 +2347,47 @@
 
         sliderData.forEach(item => {
           const slide = document.createElement('div');
+          const slideInner = document.createElement('div');
           slide.classList.add('swiper-slide');
+          slideInner.classList.add('slide-inner');
+          slideInner.classList.add('fade-in');
 
-          slide.innerHTML = `
+          slideInner.innerHTML = `
             <p>${item.text}</p>
             <img src="${item.imgSrc}" alt="${item.source} Logo">
           `;
 
           wrapper.appendChild(slide);
+          slide.appendChild(slideInner);
         });
       };
 
       // Call the function to populate the swiper slides
       generateSwiperSlides();
 
-      const testimonialSwiper = new Swiper('.testimonial-slider', {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+      const testiSlider = new Swiper('.testimonial-slider', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        on: {
+          slideChangeTransitionStart: function () {
+            document.querySelectorAll('.testimonial-slider-wrapper .slide-inner').forEach(el => {
+              el.classList.remove('fade-in');
+              el.classList.add('fade-out');
+            });
           },
-          loop: true,
-          // breakpoints: {
-          //   768: {
-          //     enabled: false, // disable swiper on tablets/desktops
-          //   },
-          // },
-          effect: 'fade',
-          fadeEffect: {
-            crossFade: true,
-          },
-      });
+          slideChangeTransitionEnd: function () {
+            const activeSlide = document.querySelector('.testimonial-slider-wrapper .swiper-slide-active .slide-inner');
+            if (activeSlide) {
+              activeSlide.classList.remove('fade-out');
+              activeSlide.classList.add('fade-in');
+            }
+          }
+        },
+      })
 
 
       let cartPopup = document.getElementById("cart-popup");
@@ -2448,8 +2454,13 @@
       });
 
       const swiper = new Swiper(".swiper-real", {
-        slidesPerView: 4,
-        spaceBetween: 20,
+        slidesPerView: 3.6,
+        spaceBetween: 40,
+
+        // effect: 'fade',
+        // fadeEffect: {
+        //   crossFade: true
+        // },
 
         scrollbar: {
           el: ".swiper-scrollbar",
@@ -2458,7 +2469,7 @@
         },
         breakpoints: {
           1024: {
-            slidesPerView: 4
+            slidesPerView: 3.6
           },
           // When window width is <= 768px
           768: {
@@ -2468,11 +2479,12 @@
           // Optional: for smaller devices
           320: {
             slidesPerView: 2,
-            spaceBetween: 10
+            spaceBetween: 40
           }
-        }
-      });
+        },
 
+        
+      });
 
       let popups = document.querySelectorAll('.popup.tooltip');
       let crossBtns = document.querySelectorAll('.cross-btn');
