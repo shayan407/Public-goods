@@ -960,7 +960,6 @@ nav a{
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
-    padding-left: 0;
     overflow: hidden;
 }
 .second-section-swiper-slider-inner-bottom .swiper-slide{
@@ -1240,6 +1239,9 @@ nav a{
     .second-section-swiper-slider-inner-bottom .swiper-slide .price-tooltip .tooltip .Member_Price .popup-btn{
         margin-bottom: -2px;
     }
+    .second-section-swiper-slider-inner-bottom .swiper-wrapper{
+        padding: 20px 0px;
+    }
 }
 
 .slide-tooltip{
@@ -1435,6 +1437,9 @@ nav a{
     .fourth-section-inner-right-content h2{
         font-size: 24px;
         text-align: center;
+    }
+    .swiper-real{
+        padding-right: 17px;
     }
     .fourth-section-inner-left .fourth-section-inner-left-img-div img{
         width: 100%;
